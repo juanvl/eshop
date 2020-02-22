@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "immer": "^5.3.6",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-redux": "^7.2.0",
     "react-router-dom": "latest",
     "react-scripts": "latest",
+    "react-toastify": "^5.5.0",
     "reactotron-react-js": "latest",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
     "styled-components": "latest"
   },
   "devDependencies": {
