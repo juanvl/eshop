@@ -6,7 +6,7 @@ export default reducers => {
     {
       key: 'eshop',
       storage,
-      whitelist: ['products', 'cart'],
+      whitelist: ['productsList', 'cart'],
     },
     reducers
   );

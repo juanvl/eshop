@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { addProduct } from '~/store/modules/products/actions';
+import { addProductToList } from '~/store/modules/productsList/actions';
 
 import * as S from './styles';
 
@@ -16,7 +16,7 @@ export default function ProductAdd() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    dispatch(addProduct(form.product_name, form.product_price));
+    dispatch(addProductToList(form.product_name, form.product_price));
   }
 
   function onInputChange(e) {
