@@ -4,8 +4,6 @@ import { ToastContainer } from 'react-toastify';
 
 import { PersistGate } from 'redux-persist/integration/react';
 
-import '~/config/ReactotronConfig';
-
 import Routes from '~/routes';
 import GlobalStyles from '~/styles/global';
 

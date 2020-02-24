@@ -13,7 +13,6 @@ export default function productsList(state = INITIAL_STATE, action) {
       }
 
       default:
-        return INITIAL_STATE;
     }
   });
 }
