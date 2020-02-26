@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { formatPrice } from '~/util/format';
 
@@ -25,7 +26,12 @@ export default function ProductCart() {
 
   return (
     <S.Container>
-      <h1>Carrinho</h1>
+      <h1>Meu carrinho</h1>
+
+      <span>
+        <Link to="/">Voltar</Link>
+      </span>
+
       <ul>
         {products.map(product => (
           <li key={product.id}>

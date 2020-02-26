@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 import { produce } from 'immer';
 
 const INITIAL_STATE = {
@@ -16,6 +18,10 @@ export default function cart(state = INITIAL_STATE, action) {
         } else {
           draft.products.push({ ...action.payload.product, amount: 1 });
         }
+
+        toast.success('Adicionado ao carrinho!', {
+          className: 'toastbg',
+        });
         break;
       }
 
