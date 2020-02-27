@@ -1,6 +1,6 @@
-export function addProductToList(name, price) {
+export function addProduct(name, price) {
   return {
-    type: 'ADD_PRODUCT_TO_LIST',
+    type: '@productsList/ADD_PRODUCT',
     payload: { name, price },
   };
 }

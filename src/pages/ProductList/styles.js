@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 700px;
-  height: 600px;
+  max-height: 600px;
   padding: 20px;
 
   h1 {
@@ -28,25 +28,35 @@ export const Container = styled.div`
       justify-content: center;
 
       cursor: pointer;
-      opacity: 0.9;
 
       svg {
         margin-right: 5px;
+        color: #fff;
       }
 
       &:hover {
-        opacity: 1;
+        background-color: #fff;
+        color: #333;
+
+        svg {
+          color: #333;
+        }
       }
     }
   }
 
+  .scrolldiv {
+    margin: 20px 0;
+    max-height: 350px;
+  }
+
   ul {
-    margin-bottom: 20px;
+    width: 100%;
   }
 
   ul > li {
     background-color: #fff;
-    margin: 15px 0;
+    margin-bottom: 15px;
     padding: 20px;
     border-radius: 4px;
 
@@ -54,6 +64,7 @@ export const Container = styled.div`
     justify-content: space-between;
 
     div > strong {
+      color: #333;
       font-size: 20px;
       font-weight: bold;
       display: block;

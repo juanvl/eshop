@@ -9,7 +9,7 @@ const INITIAL_STATE = {
 export default function cart(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
-      case 'ADD_PRODUCT_TO_CART': {
+      case '@cart/ADD_PRODUCT': {
         const { id } = action.payload.product;
         const productInCart = draft.products.find(p => p.id === id);
 
@@ -22,6 +22,18 @@ export default function cart(state = INITIAL_STATE, action) {
         toast.success('Adicionado ao carrinho!', {
           className: 'toastbg',
         });
+        break;
+      }
+
+      case '@cart/UPDATE_AMOUNT': {
+        const { productId, amount } = action.payload;
+
+        if (amount < 1) return;
+
+        const productInCart = draft.products.find(p => p.id === productId);
+
+        productInCart.amount = amount;
+
         break;
       }
 

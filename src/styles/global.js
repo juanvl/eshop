@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 export default createGlobalStyle`
   * {
@@ -20,7 +21,8 @@ export default createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased !important;
-    background: linear-gradient(-120deg, #9EE6F9, #5893F6);
+  background: ${props =>
+    `linear-gradient(-120deg, ${props.theme.colors.secondary}, ${props.theme.colors.primary})`};
   }
 
   body, input, button {
@@ -40,7 +42,7 @@ export default createGlobalStyle`
   }
 
   .toastbg {
-    background: linear-gradient(240deg, #a8e66c, #9fe45c);
+    background: ${props => props.theme.colors.primary};
     font-weight: bold;
     font-size: 16px;
   }

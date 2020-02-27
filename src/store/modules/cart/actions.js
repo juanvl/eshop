@@ -1,6 +1,13 @@
-export function addProductToCart(product) {
+export function addProduct(product) {
   return {
-    type: 'ADD_PRODUCT_TO_CART',
+    type: '@cart/ADD_PRODUCT',
     payload: { product },
+  };
+}
+
+export function updateAmount(productId, amount) {
+  return {
+    type: '@cart/UPDATE_AMOUNT',
+    payload: { productId, amount },
   };
 }
